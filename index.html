@@ -8,7 +8,6 @@
     <meta name="keywords" content="" />
     <meta name="author" content="Antonella Tamburrano" />
     <meta name="theme-color" content="#000" />
-
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -36,10 +35,10 @@
   <body class="page intro">
     <header class="site-header">
       <nav class="menu">
-        <a class="menu-item home" href="/">toshka</a>
+        <a class="menu-item home" href="/">Toshka.</a>
 
         <a class="menu-item about" href="./about.html">
-          about
+          About
         </a>
       </nav>
     </header>
@@ -52,48 +51,30 @@
             a multimedia producer with an interest for digital visual
             production, content creation and user experience design.
           </h1>
-          <div class="grid">
+
+          <h2 class="text-center">My projects</h2>
+          <div id="projects" class="grid">
             <a href="#" class="grid__item">
-              <div
-                class="grid__item-img grid__item-img--bw"
-                style="background-image: url(img/6.jpg)"
-              ></div>
+              <div class="grid__item-imgwrap">
+                <div
+                  class="grid__item-img grid__item-img--scaled"
+                  style="background-image: url(img/10.jpg)"
+                ></div>
+              </div>
               <div class="grid__item-content">
-                <h3 class="grid__item-title">Ferreira Campos</h3>
+                <h3 class="grid__item-title">Metro Empathy</h3>
                 <span class="grid__item-cta">View Project</span>
               </div>
             </a>
             <a href="#" class="grid__item">
-              <div
-                class="grid__item-img grid__item-img--bw"
-                style="background-image: url(img/7.jpg)"
-              ></div>
-              <div class="grid__item-content">
-                <h3 class="grid__item-title">Warden Café</h3>
-                <span class="grid__item-cta">View Project</span>
+              <div class="grid__item-imgwrap">
+                <div
+                  class="grid__item-img grid__item-img--scaled"
+                  style="background-image: url(img/11.jpg)"
+                ></div>
               </div>
-            </a>
-            <a href="#" class="grid__item">
-              <div
-                class="grid__item-img grid__item-img--blur"
-                style="background-image: url(img/8.jpg)"
-              ></div>
               <div class="grid__item-content">
-                <h3 class="grid__item-title grid__item-title--inverted">
-                  Andrea Capelli
-                </h3>
-                <span class="grid__item-cta">View Project</span>
-              </div>
-            </a>
-            <a href="#" class="grid__item">
-              <div
-                class="grid__item-img grid__item-img--blur"
-                style="background-image: url(img/9.jpg)"
-              ></div>
-              <div class="grid__item-content">
-                <h3 class="grid__item-title grid__item-title--inverted">
-                  Ricci Houston
-                </h3>
+                <h3 class="grid__item-title">InStyle City</h3>
                 <span class="grid__item-cta">View Project</span>
               </div>
             </a>
@@ -121,30 +102,76 @@
                 <span class="grid__item-cta">View Project</span>
               </div>
             </a>
-            <a href="#" class="grid__item grid__item--bg">
-              <div
-                class="grid__item-img grid__item-img--opaque"
-                style="background-image: url(img/12.jpg)"
-              ></div>
+            <a href="#" class="grid__item">
+              <div class="grid__item-imgwrap">
+                <div
+                  class="grid__item-img grid__item-img--scaled"
+                  style="background-image: url(img/10.jpg)"
+                ></div>
+              </div>
               <div class="grid__item-content">
-                <h3 class="grid__item-title">Nature Zack</h3>
+                <h3 class="grid__item-title">Metro Empathy</h3>
                 <span class="grid__item-cta">View Project</span>
               </div>
             </a>
-            <a href="#" class="grid__item grid__item--bg">
-              <div
-                class="grid__item-img grid__item-img--opaque"
-                style="background-image: url(img/13.jpg)"
-              ></div>
+            <a href="#" class="grid__item">
+              <div class="grid__item-imgwrap">
+                <div
+                  class="grid__item-img grid__item-img--scaled"
+                  style="background-image: url(img/11.jpg)"
+                ></div>
+              </div>
               <div class="grid__item-content">
-                <h3 class="grid__item-title">subIrish Moss</h3>
+                <h3 class="grid__item-title">InStyle City</h3>
+                <span class="grid__item-cta">View Project</span>
+              </div>
+            </a>
+            <a href="#" class="grid__item">
+              <div class="grid__item-imgwrap">
+                <div
+                  class="grid__item-img grid__item-img--scaled"
+                  style="background-image: url(img/10.jpg)"
+                ></div>
+              </div>
+              <div class="grid__item-content">
+                <h3 class="grid__item-title">Metro Empathy</h3>
+                <span class="grid__item-cta">View Project</span>
+              </div>
+            </a>
+            <a href="#" class="grid__item">
+              <div class="grid__item-imgwrap">
+                <div
+                  class="grid__item-img grid__item-img--scaled"
+                  style="background-image: url(img/11.jpg)"
+                ></div>
+              </div>
+              <div class="grid__item-content">
+                <h3 class="grid__item-title">InStyle City</h3>
                 <span class="grid__item-cta">View Project</span>
               </div>
             </a>
           </div>
+          <a href="./about.html">
+            <button class="iconbutton iconbutton--border">
+              <span class="iconbutton__text">about me</span>
+              <span class="iconbutton__graphic">
+                <svg class="icon icon--arrow-right">
+                  <use xlink:href="#icon-arrow"></use>
+                </svg>
+              </span>
+              <div class="iconbutton__border"></div></button
+          ></a>
         </div>
       </section>
     </main>
+    <svg class="hidden">
+      <symbol id="icon-arrow" viewBox="0 0 24 24">
+        <title>arrow</title>
+        <polygon
+          points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 "
+        />
+      </symbol>
+    </svg>
     <footer class="site-footer">
       <p>Copyright © Antonella Tamburrano 2019</p>
     </footer>
