@@ -45,20 +45,7 @@ export function Projects() {
             ease: Power2.easeOut,
             filter: `grayscale(${Math.min(bw, grayscaleInterval.from)})`
           });
-        } else if (img.classList.contains("grid__item-img--blur")) {
-          const b = lineEq(
-            blurInterval.from,
-            blurInterval.to,
-            distanceThreshold.max,
-            distanceThreshold.min,
-            distance
-          );
-          /*TweenMax.to(img, 0.5, {
-                    ease: Expo.easeOut,
-                    filter: `blur(${Math.min(b,blurInterval.from)}px)`
-                });*/
-          img.style.filter = `blur(${Math.min(b, blurInterval.from)}px)`;
-        } else if (img.classList.contains("grid__item-img--scaled")) {
+
           const s = lineEq(
             scaleInterval.from,
             scaleInterval.to,
@@ -69,19 +56,6 @@ export function Projects() {
           TweenMax.to(img, 1.5, {
             ease: Power2.easeOut,
             scale: Math.min(s, scaleInterval.from)
-          });
-        } else if (img.classList.contains("grid__item-img--opaque")) {
-          const o = lineEq(
-            opacityInterval.from,
-            opacityInterval.to,
-            distanceThreshold.max,
-            distanceThreshold.min,
-            distance
-          );
-
-          TweenMax.to(img, 0.5, {
-            ease: Expo.easeOut,
-            opacity: Math.max(Math.min(o, opacityInterval.to), 0)
           });
         }
 
