@@ -11,7 +11,6 @@ export function Button() {
   const distanceThreshold = { min: 0, max: 100 };
   const grayscaleInterval = { from: 1, to: 0 };
   const bttn = document.querySelector(".iconbutton--border");
-  const bttnBorder = bttn.querySelector(".iconbutton__border");
   const borderInterval = { from: 0.1, to: 1 };
   const bttnGraphic = bttn.querySelector(".iconbutton__graphic");
   const bttnText = bttn.querySelector(".iconbutton__text");
@@ -27,7 +26,8 @@ export function Button() {
         distanceThreshold.min,
         distance
       );
-      TweenMax.to(bttnBorder, 0.5, {
+
+      TweenMax.to(bttn, 0.5, {
         ease: "Expo.easeOut",
         opacity: `${Math.max(
           Math.min(border, borderInterval.to),
