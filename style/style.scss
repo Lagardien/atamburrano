@@ -60,6 +60,23 @@ $grey: #131313;
     width: 300px;
     height: 300px;
     overflow: initial;
+    #pixel {
+      animation: move 3s ease infinite;
+    }
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(21px);
+  }
+
+  50% {
+    transform: translate(0px);
+  }
+
+  100% {
+    transform: translate(21px);
   }
 }
 
@@ -140,17 +157,18 @@ header {
         left: 25px;
         top: 25px;
         svg {
+          width: 75px;
           tspan {
+            font-style: normal;
             font-weight: normal;
           }
-          width: 100%;
 
           #pixel {
             transition: 300ms ease-in-out;
           }
           &:hover {
             #pixel {
-              transform: translate(42px);
+              transform: translate(21px);
             }
           }
         }

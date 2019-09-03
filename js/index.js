@@ -7,29 +7,6 @@ $(window).on("load", function() {
   }, 4000);
 });
 
-import LazyLinePainter from "./lazy-line-painter-1.9.6.min.js";
-
-(function() {
-  document.onreadystatechange = () => {
-    if (document.readyState === "complete") {
-      /**
-       * Setup your Lazy Line element.
-       * see README file for more settings
-       */
-
-      let el = document.querySelector("#lbcolor");
-      let myAnimation = new LazyLinePainter(el, {
-        ease: "easeLinear",
-        strokeWidth: 12.1,
-        strokeOpacity: 1,
-        strokeColor: "#fff",
-        strokeCap: "round"
-      });
-      myAnimation.paint();
-    }
-  };
-})();
-
 /* Projects effect */
 
 import { Projects } from "./projects-effect";
