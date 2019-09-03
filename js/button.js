@@ -10,8 +10,9 @@ export function Button() {
 
   const distanceThreshold = { min: 0, max: 100 };
   const grayscaleInterval = { from: 1, to: 0 };
+
   const bttn = document.querySelector(".iconbutton--border");
-  const borderInterval = { from: 0.1, to: 1 };
+  const opacityInterval = { from: 0.1, to: 1 };
   const bttnGraphic = bttn.querySelector(".iconbutton__graphic");
   const bttnText = bttn.querySelector(".iconbutton__text");
   const graphicInterval = { from: 60, to: 0 };
@@ -19,9 +20,9 @@ export function Button() {
 
   new Nearby(bttn, {
     onProgress: distance => {
-      const border = lineEq(
-        borderInterval.from,
-        borderInterval.to,
+      const opacity = lineEq(
+        opacityInterval.from,
+        opacityInterval.to,
         distanceThreshold.max,
         distanceThreshold.min,
         distance
@@ -30,8 +31,8 @@ export function Button() {
       TweenMax.to(bttn, 0.5, {
         ease: "Expo.easeOut",
         opacity: `${Math.max(
-          Math.min(border, borderInterval.to),
-          borderInterval.from
+          Math.min(opacity, opacityInterval.to),
+          opacityInterval.from
         )}`
       });
 
