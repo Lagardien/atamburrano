@@ -1,10 +1,16 @@
 /* Variables */
-$red: #ffcb05;
+$yellow: #ffcb05;
+$red: #fc0000;
 $black: #000;
 $white: #fff;
+$grey: #131313;
 
 .red {
   color: $red;
+}
+
+.yellow {
+  color: $yellow;
 }
 
 .white {
@@ -15,8 +21,8 @@ $white: #fff;
   color: $black;
 }
 
-.red-bg {
-  background: $red;
+.yellow-bg {
+  background: $yellow;
 }
 
 .white-bg {
@@ -59,8 +65,8 @@ $white: #fff;
 
 /* Fonts */
 @font-face {
-  font-family: avenir;
-  src: url("/fonts/avenir.otf");
+  font-family: minion;
+  src: url("/fonts/minion.otf");
 }
 
 /* Scrollbar */
@@ -71,7 +77,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: $red;
+  background-color: $yellow;
 }
 
 /* General */
@@ -79,7 +85,7 @@ body {
   margin: 0;
   background: $black;
   color: $white;
-  font-family: "avenir";
+  font-family: "minion";
 
   h1 {
     font-size: 3vw;
@@ -102,7 +108,7 @@ body {
 
     &:hover,
     &.active {
-      color: $red;
+      color: $yellow;
     }
   }
 
@@ -127,12 +133,27 @@ header {
       margin: 0;
       &:hover,
       &.active {
-        color: $red;
+        color: $yellow;
       }
       &.home {
         position: absolute;
-        left: 50px;
+        left: 25px;
         top: 25px;
+        svg {
+          tspan {
+            font-weight: normal;
+          }
+          width: 100%;
+
+          #pixel {
+            transition: 300ms ease-in-out;
+          }
+          &:hover {
+            #pixel {
+              transform: translate(42px);
+            }
+          }
+        }
       }
       &.about {
         position: absolute;
@@ -140,7 +161,7 @@ header {
         top: 25px;
         font-size: 2vw;
         &.is-active {
-          color: $red;
+          color: $yellow;
         }
       }
     }
@@ -225,7 +246,7 @@ footer {
     font-weight: bold;
     display: block;
     font-size: 1.5rem;
-    color: $red;
+    color: $yellow;
     text-transform: lowercase;
     display: flex;
     justify-content: flex-end;
@@ -328,7 +349,7 @@ footer {
       margin: 0 0 0.5rem 0;
       display: flex;
       overflow: hidden;
-      color: $red;
+      color: $yellow;
     }
 
     .form__label span {
@@ -377,7 +398,7 @@ footer {
       padding: 1.5rem;
       display: flex;
       overflow: hidden;
-      color: $red;
+      color: $yellow;
       font-weight: bold;
       &.message {
         top: 30px;
@@ -406,7 +427,7 @@ footer {
 
     .form__button:hover {
       color: $white;
-      background: $red;
+      background: $yellow;
       cursor: pointer;
     }
 
@@ -488,7 +509,6 @@ input[type="submit"] {
   padding: 1rem 3.5rem;
   overflow: hidden;
   background: $white;
-  opacity: 0.25;
 }
 
 .iconbutton__text {
@@ -500,7 +520,6 @@ input[type="submit"] {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: grayscale(1);
 }
 
 .iconbutton__graphic {
@@ -510,7 +529,6 @@ input[type="submit"] {
   display: flex;
   height: 100%;
   align-items: center;
-  transform: translate3d(60px, 0, 0);
 }
 
 .icon--arrow-right {
