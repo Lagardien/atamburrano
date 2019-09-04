@@ -1,12 +1,12 @@
 /* Variables */
 $yellow: #ffcb05;
-$red: #fc0000;
+$orange: #ff8c00;
 $black: #000;
 $white: #fff;
 $grey: #131313;
 
-.red {
-  color: $red;
+.orange {
+  color: $orange;
 }
 
 .yellow {
@@ -96,10 +96,13 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: $yellow;
+  background: linear-gradient(40deg, $orange 0%, $yellow 100%);
 }
 
 /* General */
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   background: $black;
@@ -107,12 +110,12 @@ body {
   font-family: "Open Sans", sans-serif;
 
   h1 {
-    font-size: 3vw;
+    font-size: 28px;
     margin: 0;
   }
 
   h2 {
-    font-size: 2vw;
+    font-size: 24px;
     margin: 0;
   }
 
@@ -135,6 +138,21 @@ body {
     position: fixed;
     height: 100vh;
     overflow: hidden;
+  }
+
+  .content {
+    padding: 50px 0;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  svg.logo {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
 }
 
@@ -179,7 +197,7 @@ header {
         position: absolute;
         right: 50px;
         top: 25px;
-        font-size: 28px;
+        font-size: 20px;
         &.is-active {
           color: $yellow;
         }
@@ -196,9 +214,10 @@ footer {
   background: $black;
 
   p {
+    width: 80%;
     font-size: 14px;
-    margin-left: 50px;
-    padding: 25px;
+    margin: 0 auto;
+    padding: 25px 0;
   }
 }
 
@@ -206,7 +225,7 @@ footer {
 
 .home {
   h1 {
-    padding: 100px;
+    padding: 50px 0;
   }
 
   .grid {
@@ -258,6 +277,7 @@ footer {
     color: #fff;
     text-align: right;
     text-transform: lowercase;
+    font-family: "minion";
   }
 
   .grid__item-cta {
@@ -300,16 +320,13 @@ footer {
 /* About */
 
 .about {
-  background: $black;
   h1 {
-    padding: 100px;
+    margin-bottom: 50px;
   }
 
   .description {
     font-size: 20px;
     line-height: 30px;
-    margin: 0 auto;
-    width: 80%;
     padding-bottom: 75px;
   }
   // Contact form
@@ -432,11 +449,11 @@ footer {
     .form__button {
       padding: 1rem 2rem;
       font-weight: bold;
-      border-radius: 25px;
+      border-radius: 50px;
       border: 0;
       margin: 1.2rem 0 0 auto;
-      background: $white;
-      color: $black;
+      color: $white;
+      background: linear-gradient(40deg, $orange 0%, $yellow 100%);
       align-self: center;
       transition: 300ms ease-in-out;
     }
@@ -446,8 +463,8 @@ footer {
     }
 
     .form__button:hover {
-      color: $white;
-      background: $yellow;
+      filter: brightness(1.2);
+
       cursor: pointer;
     }
 
@@ -509,16 +526,16 @@ input[type="submit"] {
 }
 
 .iconbutton {
-  margin: 0 auto;
-  margin-bottom: 100px;
+  margin: 50px auto;
+
   display: flex;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 20px;
   background: none;
   border: 0;
   padding: 0 2rem;
   position: relative;
-  border-radius: 25px;
+  border-radius: 50px;
 }
 
 .iconbutton:focus {
@@ -528,13 +545,13 @@ input[type="submit"] {
 .iconbutton--border {
   padding: 1rem 3.5rem;
   overflow: hidden;
-  background: $white;
+  background: linear-gradient(40deg, $orange 0%, $yellow 100%);
 }
 
 .iconbutton__text {
   font-weight: 700;
   margin: 0;
-  background: linear-gradient(40deg, $red 0%, $red 100%);
+  background: $white;
   background-size: cover;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -553,7 +570,12 @@ input[type="submit"] {
 
 .icon--arrow-right {
   transform: rotate(180deg);
-  color: $red;
+  color: $white;
+}
+
+.arrow-back {
+  transform: rotate(180deg);
+  color: $white;
 }
 
 @media screen and (max-width: 55em) {
@@ -562,7 +584,59 @@ input[type="submit"] {
   }
 }
 
+/* Scroll button */
+
+.scroll {
+  width: 2rem;
+  height: 3.25rem;
+  border-radius: 1rem;
+  border: 2px solid $white;
+}
+
+.scroll__wheel {
+  width: 2px;
+  height: 1rem;
+  background: $white;
+  border-radius: 0.1rem;
+  margin: 0.25rem auto 0;
+}
+
 /* Single Project */
+
+.project {
+  h1 {
+    font-size: 70px;
+    margin: 15px 0;
+  }
+  h2 {
+    margin: 15px 0;
+    font-family: "minion";
+  }
+
+  p {
+    margin: 15px 0;
+  }
+
+  .arrow-back {
+    margin: 50px 0;
+    height: 50px;
+    width: 50px;
+    transform: initial;
+    color: $yellow;
+    transition: 300ms ease-in-out;
+    &:hover {
+      color: $white;
+    }
+
+    &.icon {
+      display: inline;
+    }
+  }
+
+  .vimeo {
+    margin: 50px 0;
+  }
+}
 
 /* Responsive */
 

@@ -9,12 +9,10 @@ export function Button() {
   };
 
   const distanceThreshold = { min: 0, max: 100 };
-  const grayscaleInterval = { from: 1, to: 0 };
-
   const bttn = document.querySelector(".iconbutton--border");
-  const opacityInterval = { from: 0.1, to: 1 };
   const bttnGraphic = bttn.querySelector(".iconbutton__graphic");
   const bttnText = bttn.querySelector(".iconbutton__text");
+  const opacityInterval = { from: 0.1, to: 1 };
   const graphicInterval = { from: 60, to: 0 };
   const textInterval = { from: 0, to: -20 };
 
@@ -55,17 +53,10 @@ export function Button() {
         distanceThreshold.min,
         distance
       );
-      const bw = lineEq(
-        grayscaleInterval.from,
-        grayscaleInterval.to,
-        distanceThreshold.max,
-        distanceThreshold.min,
-        distance
-      );
+
       TweenMax.to(bttnText, 0.5, {
         ease: "Expo.easeOut",
-        x: `${Math.min(txText, graphicInterval.to)}`,
-        filter: `grayscale(${Math.min(bw, grayscaleInterval.from)})`
+        x: `${Math.min(txText, graphicInterval.to)}`
       });
     }
   });
