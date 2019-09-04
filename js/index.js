@@ -7,6 +7,13 @@ $(window).on("load", function() {
   }, 4000);
 });
 
+/* Scroll icon */
+
+import { Scroll } from "./scroll-icon";
+if (document.querySelector(".home")) {
+  let scroll = Scroll();
+}
+
 /* Projects effect */
 
 import { Projects } from "./projects-effect";
