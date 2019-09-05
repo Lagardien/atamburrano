@@ -60,7 +60,7 @@ $grey: #131313;
     width: 300px;
     height: 300px;
     overflow: initial;
-    #pixel rect {
+    #pixel {
       animation: move 3s ease infinite;
     }
   }
@@ -68,15 +68,15 @@ $grey: #131313;
 
 @keyframes move {
   0% {
-    transform: translate(20px);
+    transform: translateX(20px);
   }
 
   50% {
-    transform: translate(-1px);
+    transform: translateX(-1px);
   }
 
   100% {
-    transform: translate(20px);
+    transform: translateX(20px);
   }
 }
 
@@ -183,12 +183,12 @@ header {
             font-weight: normal;
           }
 
-          #pixel rect {
+          #pixel {
             transition: 300ms ease-in-out;
           }
           &:hover {
-            #pixel rect {
-              transform: translate(21px);
+            #pixel {
+              transform: translateX(21px);
             }
           }
         }
