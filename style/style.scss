@@ -60,7 +60,7 @@ $grey: #131313;
     width: 300px;
     height: 300px;
     overflow: initial;
-    #pixel {
+    .pixel {
       animation: move 3s ease infinite;
     }
   }
@@ -183,16 +183,12 @@ header {
             font-weight: normal;
           }
 
-          #pixel {
+          .pixel {
             transition: 300ms ease-in-out;
           }
           &:hover {
-            #pixel {
+            .pixel {
               transform: translate(21px);
-            }
-
-            .letter {
-              fill: $yellow;
             }
           }
         }
