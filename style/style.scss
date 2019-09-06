@@ -60,7 +60,7 @@ $grey: #131313;
     width: 300px;
     height: 300px;
     overflow: initial;
-    #pixel rect {
+    #pixel {
       animation: move 3s ease infinite;
     }
   }
@@ -176,6 +176,22 @@ header {
         position: absolute;
         left: 20px;
         top: 10px;
+        .logo {
+          width: 50px;
+          .letter {
+            font-style: normal;
+            font-weight: normal;
+          }
+
+          #pixel {
+            transition: 300ms ease-in-out;
+          }
+          &:hover {
+            #pixel {
+              transform: translate(21px);
+            }
+          }
+        }
       }
       &.about {
         position: absolute;
@@ -639,21 +655,4 @@ input[type="submit"] {
 }
 
 @media (max-width: 1300px) {
-}
-
-svg.logo {
-  width: 50px;
-  .letter {
-    font-style: normal;
-    font-weight: normal;
-  }
-
-  #pixel .pixel {
-    transition: 300ms ease-in-out;
-  }
-  &:hover {
-    #pixel .pixel {
-      fill: $yellow !important;
-    }
-  }
 }
