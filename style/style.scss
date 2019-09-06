@@ -188,11 +188,7 @@ header {
           }
           &:hover {
             #pixel rect {
-              transform: translate(21px);
-              -moz-transform: translate(21px);
-              -webkit-transform: translate(21px);
-              -o-transform: translate(21px);
-              -ms-transform: translate(21px);
+              fill: $yellow;
             }
           }
         }
@@ -648,7 +644,7 @@ input[type="submit"] {
       width: auto;
       height: 400px;
       object-fit: contain;
-      margin: 0 auto;
+      margin: 100px auto;
     }
   }
 }
