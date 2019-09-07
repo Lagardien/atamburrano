@@ -610,12 +610,16 @@ input[type="submit"] {
     margin: 15px 0;
   }
   h2 {
+    font-size: 35px;
     margin: 15px 0;
     font-family: "minion";
+    text-transform: lowercase;
+    font-weight: normal;
   }
 
   p {
     margin: 15px 0;
+    width: 80%;
   }
 
   .arrow-back {
@@ -641,7 +645,7 @@ input[type="submit"] {
   .media-flex {
     display: flex;
     img {
-      width: auto;
+      width: 40%;
       height: 400px;
       object-fit: contain;
       margin: 100px auto;
