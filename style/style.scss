@@ -1,3 +1,11 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+@font-face {
+  font-family: minion;
+  src: url("/fonts/minion.otf");
+}
+
 /* Variables */
 $yellow: #ffcb05;
 $orange: #ff8c00;
@@ -78,14 +86,6 @@ $grey: #131313;
   100% {
     transform: translate(20px);
   }
-}
-
-/* Fonts */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
-
-@font-face {
-  font-family: minion;
-  src: url("/fonts/minion.otf");
 }
 
 /* Scrollbar */
