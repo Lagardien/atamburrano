@@ -337,13 +337,6 @@ footer {
     justify-content: center;
     align-items: center;
 
-    .content--fixed {
-      grid-template-areas:
-        "header ..."
-        "... ..."
-        "demos info";
-    }
-
     .headline {
       font-size: 5vw;
       font-weight: bold;
@@ -640,16 +633,33 @@ input[type="submit"] {
   }
 
   .vimeo {
-    margin: 50px 0;
+    margin: 50px 4rem;
   }
 
-  .media-flex {
-    display: flex;
+  .media-grid {
+    padding: 4rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 5vw));
+    grid-column-gap: 10vw;
+    grid-row-gap: 25vh;
+    max-width: 1300px;
+
     img {
-      width: 40%;
-      height: 400px;
+      width: 100%;
       object-fit: contain;
-      margin: 100px auto;
+    }
+  }
+
+  @media screen and (max-width: 55em) {
+    .media-grid {
+      padding: 1rem 0;
+      grid-template-columns: 100%;
+      grid-row-gap: 4rem;
+    }
+
+    .vimeo {
+      margin: 50px 0;
     }
   }
 }
@@ -660,4 +670,15 @@ input[type="submit"] {
 }
 
 @media (max-width: 1300px) {
+}
+
+@media (max-width: 1000px) {
+  .about {
+    .contact {
+      display: block;
+      .headline {
+        text-align: center;
+      }
+    }
+  }
 }
