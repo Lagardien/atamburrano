@@ -2,8 +2,12 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 
 @font-face {
-  font-family: minion;
-  src: url("/fonts/minion.otf");
+  font-family: "Minion Pro Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Minion Pro Regular"),
+    url("https://www.cufonfonts.com/cdn/webfont/minion-pro/MinionPro-Regular.woff?token=EZfqFLOLkfUTY9Iwlsbzy6bT7xYQKcmy")
+      format("woff");
 }
 
 /* Variables */
@@ -277,7 +281,7 @@ footer {
     color: #fff;
     text-align: right;
     text-transform: lowercase;
-    font-family: "minion";
+    font-family: "Minion Pro Regular";
   }
 
   .grid__item-cta {
@@ -612,7 +616,7 @@ input[type="submit"] {
   h2 {
     font-size: 35px;
     margin: 15px 0;
-    font-family: "minion";
+    font-family: "Minion Pro Regular";
     text-transform: lowercase;
     font-weight: normal;
   }
