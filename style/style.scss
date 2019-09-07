@@ -636,13 +636,21 @@ input[type="submit"] {
     margin: 50px 4rem;
   }
 
+  .media {
+    padding: 4rem;
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
   .media-grid {
     padding: 4rem;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(2, calc(50% - 5vw));
-    grid-column-gap: 10vw;
-    grid-row-gap: 25vh;
+    grid-template-columns: repeat(2, calc(50% - 2.5vw));
+    grid-column-gap: 5vw;
+    grid-row-gap: 10vh;
     max-width: 1300px;
 
     img {
@@ -656,6 +664,10 @@ input[type="submit"] {
       padding: 1rem 0;
       grid-template-columns: 100%;
       grid-row-gap: 4rem;
+    }
+
+    .media {
+      padding: 1rem 0;
     }
 
     .vimeo {
