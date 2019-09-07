@@ -666,12 +666,6 @@ input[type="submit"] {
 
 /* Responsive */
 
-@media (max-width: 769px) {
-}
-
-@media (max-width: 1300px) {
-}
-
 @media (max-width: 1000px) {
   .about {
     .contact {
@@ -679,6 +673,29 @@ input[type="submit"] {
       .headline {
         text-align: center;
       }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  button {
+    opacity: 1 !important;
+  }
+
+  .home .grid__item-img--bw {
+    transform: none;
+    filter: none;
+  }
+  .home .grid__item-cta span {
+    opacity: 1;
+  }
+  .home .iconbutton {
+    display: none;
+  }
+
+  .project {
+    p {
+      width: 100%;
     }
   }
 }
