@@ -4,6 +4,7 @@
 @import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
 @font-face {
   font-family: minion;
+  font-display: fallback;
   src: url("/fonts/minion.woff") format("woff");
 }
 
@@ -73,9 +74,7 @@ $grey: #131313;
     width: 300px;
     height: 300px;
     overflow: initial;
-    .letter {
-      font-display: auto;
-    }
+
     .pixel {
       animation: move 3s ease infinite;
     }
@@ -791,7 +790,7 @@ input[type="submit"] {
   }
 
   .home h1 {
-    padding: 0;
+    padding-top: 0;
   }
   .about .description {
     font-size: 12px;
