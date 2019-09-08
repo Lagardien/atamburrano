@@ -36,6 +36,10 @@ import { Contact } from "./contact";
 
 import Glide from "@glidejs/glide";
 
+$(".grid__item").bind("contextmenu", function(e) {
+  return false;
+});
+
 /* Transition */
 
 // Import Highway
@@ -100,4 +104,8 @@ H.on("NAVIGATE_END", ({ to, from, trigger, location }) => {
   if (document.querySelector(".project")) {
     new Glide(".glide").mount();
   }
+
+  $("img").bind("contextmenu", function(e) {
+    return false;
+  });
 });
