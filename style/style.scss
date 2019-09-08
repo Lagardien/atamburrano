@@ -601,22 +601,25 @@ input[type="submit"] {
 .project {
   h1 {
     font-size: 70px;
-    margin: 15px 0;
+
     .smaller {
       font-size: 40px;
     }
   }
   h2 {
-    font-size: 30px;
-    margin: 15px 0;
-    font-family: "minion";
+    font-size: 18px;
 
     font-weight: normal;
   }
 
   p {
-    margin: 15px 0;
     width: 80%;
+  }
+
+  h1,
+  h2,
+  p {
+    margin: 15px 4rem;
   }
 
   .arrow-back {
@@ -675,6 +678,12 @@ input[type="submit"] {
 
     .vimeo {
       margin: 50px 0;
+    }
+
+    h1,
+    h2,
+    p {
+      margin: 15px 0rem;
     }
   }
 }
