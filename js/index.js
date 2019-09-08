@@ -32,6 +32,10 @@ if (document.querySelector(".page")) {
 
 import { Contact } from "./contact";
 
+/* Slider */
+
+import Glide from "@glidejs/glide";
+
 /* Transition */
 
 // Import Highway
@@ -91,4 +95,6 @@ H.on("NAVIGATE_END", ({ to, from, trigger, location }) => {
   if (document.querySelector(".home")) {
     let projects = Projects();
   }
+
+  new Glide(".glide").mount();
 });

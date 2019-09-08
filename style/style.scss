@@ -1,6 +1,7 @@
 /* Fonts */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
-
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
 @font-face {
   font-family: minion;
   src: url("/fonts/minion.woff") format("woff");
@@ -665,6 +666,49 @@ input[type="submit"] {
     }
   }
 
+  .glide {
+    &:hover .glide__arrow,
+    &:hover .glide__bullet {
+      opacity: 1;
+    }
+    .glide__arrow {
+      opacity: 0.3;
+      color: $white;
+      font-size: 32px;
+      font-weight: 700;
+      padding: 10px 16px;
+      border: 0px;
+      border-radius: 25px;
+      box-shadow: 0;
+      text-shadow: 0;
+      background: linear-gradient(40deg, $orange 0%, $yellow 100%);
+
+      &.glide__arrow--right {
+        transform: translateX(100px);
+      }
+      &.glide__arrow--left {
+        transform: translateX(-100px);
+      }
+    }
+
+    .glide__bullet {
+      opacity: 0.3;
+      background-color: $white;
+      width: 20px;
+      height: 20px;
+      border: 0;
+      box-shadow: none;
+
+      &.glide__bullet--active {
+        background: linear-gradient(40deg, $orange 0%, $yellow 100%);
+      }
+    }
+    img {
+      width: inherit;
+      padding: 4rem;
+    }
+  }
+
   @media screen and (max-width: 55em) {
     .media-grid {
       padding: 1rem 0;
@@ -672,7 +716,8 @@ input[type="submit"] {
       grid-row-gap: 4rem;
     }
 
-    .media {
+    .media,
+    .glide {
       padding: 1rem 0;
     }
 
@@ -684,6 +729,21 @@ input[type="submit"] {
     h2,
     p {
       margin: 15px 0rem;
+    }
+
+    .glide {
+      .glide__arrow {
+        opacity: 1;
+
+        font-size: 24px;
+
+        &.glide__arrow--right {
+          transform: translateX(56px);
+        }
+        &.glide__arrow--left {
+          transform: translateX(-56px);
+        }
+      }
     }
   }
 }
