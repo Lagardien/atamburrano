@@ -4,6 +4,7 @@
 @import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
 @font-face {
   font-family: minion;
+  font-display: auto;
   src: url("/fonts/minion.woff") format("woff");
 }
 
@@ -660,21 +661,6 @@ input[type="submit"] {
     }
   }
 
-  .media-grid {
-    padding: 4rem;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(2, calc(50% - 2.5vw));
-    grid-column-gap: 5vw;
-    grid-row-gap: 10vh;
-    max-width: 1300px;
-
-    img {
-      width: 100%;
-      object-fit: contain;
-    }
-  }
-
   .glide {
     &:hover .glide__arrow,
     &:hover .glide__bullet {
@@ -736,22 +722,21 @@ input[type="submit"] {
 
     h1,
     h2,
+    h3,
     p {
       margin: 15px 0rem;
     }
 
+    h1 {
+      font-size: 50px;
+    }
     .glide {
       .glide__arrow {
-        opacity: 1;
+        display: none;
+      }
 
-        font-size: 24px;
-
-        &.glide__arrow--right {
-          transform: translateX(56px);
-        }
-        &.glide__arrow--left {
-          transform: translateX(-56px);
-        }
+      img {
+        padding: 1rem 0;
       }
     }
   }
