@@ -46,6 +46,10 @@ $grey: #131313;
   text-align: center;
 }
 
+.hidden {
+  display: none;
+}
+
 /* Page Loader */
 
 .loader-wrapper {
@@ -600,6 +604,13 @@ input[type="submit"] {
 /* Single Project */
 
 .project {
+  h1,
+  h2,
+  h3,
+  p {
+    margin: 15px 4rem;
+  }
+
   h1 {
     font-size: 70px;
 
@@ -609,18 +620,16 @@ input[type="submit"] {
   }
   h2 {
     font-size: 18px;
+  }
 
-    font-weight: normal;
+  h3 {
+    margin-top: 100px;
+    font-size: 24px;
+    font-style: italic;
   }
 
   p {
     width: 80%;
-  }
-
-  h1,
-  h2,
-  p {
-    margin: 15px 4rem;
   }
 
   .arrow-back {

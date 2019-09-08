@@ -94,7 +94,10 @@ H.on("NAVIGATE_END", ({ to, from, trigger, location }) => {
 
   if (document.querySelector(".home")) {
     let projects = Projects();
+    let scroll = Scroll();
   }
 
-  new Glide(".glide").mount();
+  if (document.querySelector(".project")) {
+    new Glide(".glide").mount();
+  }
 });
