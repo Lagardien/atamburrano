@@ -76,14 +76,6 @@ $grey: #131313;
 
     .pixel {
       animation: move 3s ease infinite;
-
-      &.yellow {
-        animation: move 3s ease infinite, color 3s ease infinite;
-      }
-    }
-
-    path {
-      animation: color 3s ease infinite;
     }
   }
 }
@@ -99,20 +91,6 @@ $grey: #131313;
 
   100% {
     transform: translate(22px);
-  }
-}
-
-@keyframes color {
-  0% {
-    fill: $yellow;
-  }
-
-  50% {
-    fill: $white;
-  }
-
-  100% {
-    fill: $yellow;
   }
 }
 
