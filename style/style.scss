@@ -216,15 +216,34 @@ header {
 /* Footer */
 
 footer {
-  width: 100%;
+  display: flex;
+  width: 80%;
   height: auto;
   background: $black;
+  padding: 25px 0;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: baseline;
 
   p {
-    width: 80%;
     font-size: 14px;
-    margin: 0 auto;
-    padding: 25px 0;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style: none;
+    li {
+      margin: 0 10px;
+      svg {
+        transition: 300ms ease-in-out;
+        width: 30px;
+        &:hover {
+          fill: $yellow;
+        }
+      }
+    }
   }
 }
 
