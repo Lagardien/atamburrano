@@ -4,7 +4,6 @@
 @import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
 @font-face {
   font-family: minion;
-  font-display: fallback;
   src: url("/fonts/minion.woff") format("woff");
 }
 
@@ -77,21 +76,43 @@ $grey: #131313;
 
     .pixel {
       animation: move 3s ease infinite;
+
+      &.yellow {
+        animation: move 3s ease infinite, color 3s ease infinite;
+      }
+    }
+
+    path {
+      animation: color 3s ease infinite;
     }
   }
 }
 
 @keyframes move {
   0% {
-    transform: translate(20px);
+    transform: translate(22px);
   }
 
   50% {
-    transform: translate(-1px);
+    transform: translate(0px);
   }
 
   100% {
-    transform: translate(20px);
+    transform: translate(22px);
+  }
+}
+
+@keyframes color {
+  0% {
+    fill: $yellow;
+  }
+
+  50% {
+    fill: $white;
+  }
+
+  100% {
+    fill: $yellow;
   }
 }
 
@@ -152,15 +173,6 @@ body {
     width: 80%;
     margin: 0 auto;
   }
-
-  svg.logo {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
 }
 
 /* Header */
@@ -185,17 +197,20 @@ header {
         top: 10px;
         .logo {
           width: 50px;
-          .letter {
-            font-style: normal;
-            font-weight: normal;
-          }
 
-          .pixel {
+          .pixel,
+          path {
             transition: 300ms ease-in-out;
           }
           &:hover {
             .pixel {
-              transform: translate(21px);
+              transform: translate(22px);
+              &.yellow {
+                fill: $yellow;
+              }
+            }
+            path {
+              fill: $yellow;
             }
           }
         }
