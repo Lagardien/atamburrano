@@ -103,6 +103,7 @@ H.on("NAVIGATE_END", ({ to, from, trigger, location }) => {
 
   if (document.querySelector(".project")) {
     new Glide(".glide").mount();
+    new Glide(".glide2").mount();
   }
 
   $("img").bind("contextmenu", function(e) {
