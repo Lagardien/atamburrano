@@ -133,6 +133,7 @@ body {
     transition: 300ms ease-in-out;
     text-decoration: none;
     font-weight: bold;
+    color: inherit;
 
     &:hover,
     &.active {
@@ -151,6 +152,11 @@ body {
     width: 80%;
     margin: 0 auto;
   }
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
 }
 
 /* Header */
@@ -163,7 +169,6 @@ header {
       color: $white;
       height: auto;
       transition: 300ms ease-in-out;
-      font-size: 50px;
       margin: 0;
       &:hover,
       &.active {
@@ -193,11 +198,19 @@ header {
           }
         }
       }
-      &.about {
-        position: absolute;
-        right: 50px;
-        top: 25px;
-        font-size: 20px;
+    }
+
+    ul {
+      position: absolute;
+      right: 50px;
+      top: 25px;
+      font-size: 20px;
+      list-style: none;
+      display: flex;
+      .menu-item {
+        &.menu-contact {
+          margin-left: 20px;
+        }
         &.is-active {
           color: $yellow;
         }
@@ -217,14 +230,12 @@ footer {
   margin: 0 auto;
   justify-content: space-between;
   align-items: baseline;
-
+  border-top: 2px solid $white;
   p {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   ul {
-    padding: 0;
-    margin: 0;
     display: flex;
     list-style: none;
     li {
@@ -414,13 +425,11 @@ footer {
 
     .form__input {
       display: block;
-      font-size: 1.25rem;
       padding: 1.5rem;
       width: 100%;
       border: 0;
       background: #131313;
       position: relative;
-      font-weight: bold;
       color: #fff;
     }
 
