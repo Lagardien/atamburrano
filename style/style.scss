@@ -515,7 +515,9 @@ footer {
     }
 
     @media screen and (max-width: 55em) {
-      .form {
+      .form,
+      .map {
+        margin: 0 auto;
         max-width: none;
         width: 80%;
       }
@@ -797,9 +799,6 @@ input[type="submit"] {
   .about {
     .contact {
       display: block;
-      .headline {
-        text-align: center;
-      }
     }
   }
 }
@@ -836,9 +835,27 @@ input[type="submit"] {
   .home h1 {
     padding-top: 0;
   }
-  .about .description {
-    font-size: 12px;
-    line-height: 20px;
-    padding-bottom: 50px;
+
+  .about .about-intro {
+    display: block;
+    .intro-left {
+      width: 100%;
+      .description {
+        font-size: 12px;
+        line-height: 20px;
+        padding-bottom: 50px;
+      }
+    }
+    .headline {
+      text-align: center;
+    }
+  }
+  footer {
+    text-align: center;
+    display: block;
+    ul {
+      margin-top: 20px;
+      justify-content: center;
+    }
   }
 }
