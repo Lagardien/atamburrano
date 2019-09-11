@@ -351,35 +351,57 @@ footer {
 /* About */
 
 .about {
-  h1 {
-    margin-bottom: 50px;
+  .about-intro {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    .intro-left {
+      width: 60%;
+      h1 {
+        margin-bottom: 50px;
+      }
+
+      .description {
+        font-size: 20px;
+        line-height: 30px;
+        padding-bottom: 75px;
+      }
+    }
+
+    .headline {
+      margin: 0 auto;
+      font-size: 3vw;
+      font-weight: bold;
+    }
   }
 
-  .description {
-    font-size: 20px;
-    line-height: 30px;
-    padding-bottom: 75px;
-  }
   // Contact form
 
   .contact {
     display: flex;
     justify-content: center;
-    align-items: center;
 
-    .headline {
-      font-size: 5vw;
-      font-weight: bold;
-      margin: 0 auto;
+    .map {
+      width: 40%;
+
+      padding: 4rem 0 0 0;
+      h2 {
+        padding: 0 0 1.5rem;
+      }
+      .address {
+        margin-bottom: 25px;
+      }
+      iframe {
+        margin: 20px 0;
+        width: -webkit-fill-available;
+        height: 450px;
+      }
     }
 
     .form {
       margin: 0 auto;
-      width: 60%;
-      max-width: 450px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      width: 40%;
       position: relative;
       padding: 4rem 0 0 0;
       p {
@@ -431,6 +453,7 @@ footer {
       background: #131313;
       position: relative;
       color: #fff;
+      font-weight: normal;
     }
 
     .form__input:focus {
