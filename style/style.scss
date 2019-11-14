@@ -342,7 +342,7 @@ footer {
     display: block;
     font-size: 1rem;
     color: $yellow;
-    text-transform: lowercase;
+    text-transform: uppercase;
     display: flex;
     justify-content: flex-end;
   }
@@ -722,6 +722,13 @@ input[type="submit"] {
     width: 80%;
   }
 
+  ul {
+    padding: 0px 4rem;
+    li {
+      padding: 5px 0rem;
+    }
+  }
+
   .arrow-back {
     margin: 50px 0;
     height: 50px;
@@ -744,6 +751,11 @@ input[type="submit"] {
 
   .media {
     padding: 50px 4rem;
+    a {
+      &:hover {
+        background: $yellow;
+      }
+    }
     img {
       width: 100%;
       object-fit: contain;
