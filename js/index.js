@@ -3,7 +3,7 @@
 $(window).on("load", function() {
   setTimeout(function() {
     $(".loader-wrapper").fadeOut("slow");
-    $("body").removeClass("intro");
+    $("body").removeClass("load");
   }, 4000);
 });
 
@@ -35,6 +35,10 @@ import { Contact } from "./contact";
 /* Slider */
 
 import Glide from "@glidejs/glide";
+
+if (document.querySelector(".project")) {
+  new Glide(".glide").mount();
+}
 
 $(".grid__item").bind("contextmenu", function(e) {
   return false;

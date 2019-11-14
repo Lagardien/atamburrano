@@ -109,6 +109,7 @@ body::-webkit-scrollbar-thumb {
 html {
   scroll-behavior: smooth;
 }
+
 body {
   margin: 0;
   background: $black;
@@ -141,7 +142,7 @@ body {
     }
   }
 
-  &.intro {
+  &.load {
     position: fixed;
     height: 100vh;
     overflow: hidden;
