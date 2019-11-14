@@ -31,6 +31,9 @@ if (document.querySelector(".page")) {
 /* Contact form */
 
 import { Contact } from "./contact";
+if (document.querySelector(".about")) {
+  let contact = Contact();
+}
 
 /* Slider */
 
