@@ -13,7 +13,6 @@ $orange: #ff8c00;
 $black: #000;
 $white: #fff;
 $grey: #131313;
-
 .orange {
   color: $orange;
 }
@@ -769,6 +768,9 @@ input[type="submit"] {
     &.small img {
       width: 40%;
     }
+    &.medium img {
+      width: 60%;
+    }
     &.flex {
       display: flex;
       justify-content: space-evenly;
@@ -875,6 +877,23 @@ input[type="submit"] {
   header nav ul li:hover ul#submenu {
     display: none;
   }
+
+  .project .media {
+    &.small img {
+      width: 100%;
+    }
+    &.medium img {
+      width: 100%;
+    }
+
+    &.flex {
+      display: block;
+
+      img.epic {
+        width: 100%;
+      }
+    }
+  }
 }
 
 @media (max-width: 768px) {
@@ -945,5 +964,9 @@ input[type="submit"] {
     margin: 20px 0;
     width: -webkit-fill-available;
     height: 250px;
+  }
+
+  header nav .menu-item {
+    font-size: 14px;
   }
 }
