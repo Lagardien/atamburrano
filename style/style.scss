@@ -871,6 +871,10 @@ input[type="submit"] {
       display: block;
     }
   }
+
+  header nav ul li:hover ul#submenu {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -906,6 +910,10 @@ input[type="submit"] {
     padding-top: 0;
   }
 
+  .home .headline {
+    font-size: 18px;
+  }
+
   .about .about-intro {
     display: block;
     .intro-left {
@@ -916,8 +924,12 @@ input[type="submit"] {
         padding-bottom: 50px;
       }
     }
+    .intro-right {
+      width: 100%;
+    }
     .headline {
       text-align: center;
+      font-size: 6vw;
     }
   }
   footer {
@@ -927,5 +939,11 @@ input[type="submit"] {
       margin-top: 20px;
       justify-content: center;
     }
+  }
+
+  .about .contact .map iframe {
+    margin: 20px 0;
+    width: -webkit-fill-available;
+    height: 250px;
   }
 }
