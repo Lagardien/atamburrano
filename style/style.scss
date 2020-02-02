@@ -278,8 +278,9 @@ footer {
 /* Home */
 
 .home {
-  h1 {
+  .headline {
     padding: 50px 0;
+    font-size: 35px;
   }
 
   .grid {
@@ -381,6 +382,10 @@ footer {
     background-size: cover;
     background-position: center;
     height: 500px;
+  }
+
+  .profile-img {
+    width: 300px;
   }
 
   .about-section {
