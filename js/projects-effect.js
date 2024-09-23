@@ -1,6 +1,8 @@
 import charming from "./charming.min.js";
 import imagesLoaded from "./imagesloaded.pkgd.min.js";
 import Nearby from "./nearby.js";
+// GSAP Library
+import { gsap } from "gsap";
 
 export function Projects() {
   const lineEq = (y2, y1, x2, x1, currentVal) => {
@@ -41,10 +43,12 @@ export function Projects() {
             distanceThreshold.min,
             distance
           );
-          TweenMax.to(img, 1, {
-            ease: Power2.easeOut,
-            filter: `grayscale(${Math.min(bw, grayscaleInterval.from)})`
+          gsap.to(img, {
+            duration: 1,
+            ease: "power2.out",  // Updated easing syntax
+            filter: `grayscale(${Math.min(bw, grayscaleInterval.from)})`  // No changes here
           });
+          
 
           const s = lineEq(
             scaleInterval.from,
@@ -53,8 +57,9 @@ export function Projects() {
             distanceThreshold.min,
             distance
           );
-          TweenMax.to(img, 1.5, {
-            ease: Power2.easeOut,
+          gsap.to(img, {
+            duration: 1.5,
+            ease: "power2.out",  // Updated easing syntax
             scale: Math.min(s, scaleInterval.from)
           });
         }
@@ -77,7 +82,7 @@ export function Projects() {
               const letter = viewLinkLetters[lettersPosArr[i]];
               if (letter.dataset.state != "hidden") {
                 letter.dataset.state = "hidden";
-                TweenMax.to(letter, 0.5, {
+                gsap.to(letter, 0.5, {
                   ease: "Expo.easeOut",
                   y: "0%",
                   startAt: { y: "200%" },
@@ -95,7 +100,7 @@ export function Projects() {
               const letter = viewLinkLetters[lettersPosArr[i]];
               if (letter.dataset.state === "hidden") {
                 letter.dataset.state = "";
-                TweenMax.to(letter, 0.2, {
+                gsap.to(letter, 0.2, {
                   ease: "Expo.easeOut",
                   y: "200%",
                   opacity: 0

@@ -1,4 +1,6 @@
 import Nearby from "./nearby.js";
+// GSAP Library
+import { gsap } from "gsap";
 
 export function Scroll() {
   const lineEq = (y2, y1, x2, x1, currentVal) => {
@@ -15,7 +17,7 @@ export function Scroll() {
   const scrollWheel = iconWrapperScroll.querySelector(".scroll__wheel");
   const scrollInterval = { from: 1, to: 15 };
 
-  const tweenScroll = TweenMax.to(scrollWheel, 5, {
+  const tweenScroll = gsap.to(scrollWheel, 5, {
     repeat: -1,
     yoyo: false,
     y: 32,

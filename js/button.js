@@ -1,4 +1,6 @@
 import Nearby from "./nearby.js";
+// GSAP Library
+import { gsap } from "gsap";
 
 export function Button() {
   const lineEq = (y2, y1, x2, x1, currentVal) => {
@@ -27,7 +29,7 @@ export function Button() {
         distance
       );
 
-      TweenMax.to(bttn, 0.5, {
+      gsap.to(bttn, 0.5, {
         ease: "Expo.easeOut",
         opacity: `${Math.max(
           Math.min(opacity, opacityInterval.to),
@@ -42,7 +44,7 @@ export function Button() {
         distanceThreshold.min,
         distance
       );
-      TweenMax.to(bttnGraphic, 0.5, {
+      gsap.to(bttnGraphic, 0.5, {
         ease: "Expo.easeOut",
         x: `${Math.min(tx, graphicInterval.from)}`
       });
@@ -55,7 +57,7 @@ export function Button() {
         distance
       );
 
-      TweenMax.to(bttnText, 0.5, {
+      gsap.to(bttnText, 0.5, {
         ease: "Expo.easeOut",
         x: `${Math.min(txText, graphicInterval.to)}`
       });
